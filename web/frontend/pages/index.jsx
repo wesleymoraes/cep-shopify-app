@@ -35,3 +35,11 @@ export default function HomePage() {
     </Page>
   )
 }
+
+export async function getServerSideProps({ query }) {
+  return {
+    props: {
+      host: query.host || null,
+    },
+  };
+}
