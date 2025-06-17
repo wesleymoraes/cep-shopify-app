@@ -7,11 +7,17 @@ Este app permite que lojistas subam uma planilha com CEPs e salve essas informa�
 - Upload de planilha (.csv ou .xlsx)
 - Extração dos CEPs
 - Gravação no metafield custom.ceps
-- Frontend com Polaris
+- Frontend simples
 
 ## Como rodar
 
-1. `npm install`
-2. Configure o `.env` com suas chaves do Shopify e defina `HOST` para a URL do projeto na Railway, por exemplo `https://your-app.railway.app`.
-3. Rode local com `npm run dev`
-
+1. Instale as dependências na raiz do projeto:
+   ```bash
+   npm install
+   ```
+2. Ajuste o arquivo `.env` com suas chaves do Shopify e defina `HOST` para a URL do app (por exemplo `https://your-app.railway.app`).
+3. Inicie o servidor localmente com:
+   ```bash
+   npm run dev
+   ```
+4. Acesse `http://localhost:3000` no navegador para ver a interface de upload.
