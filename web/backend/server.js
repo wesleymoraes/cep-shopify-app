@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import next from 'next';
 import uploadCepRoutes from './routes/upload-ceps.js';
@@ -10,6 +11,7 @@ const port = process.env.PORT || 3000;
 
 nextApp.prepare().then(() => {
   const app = express();
+  app.use(express.json());
   app.use('/api', uploadCepRoutes);
 
   app.all('*', (req, res) => handle(req, res));

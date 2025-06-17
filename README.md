@@ -13,5 +13,5 @@ Este app permite que lojistas subam uma planilha com CEPs e salve essas informa�
 
 1. Execute `npm install` na raiz do projeto. Isso instalará as dependências do servidor e do frontend.
 2. Configure o arquivo `.env` com suas chaves do Shopify e defina `HOST` para a URL do projeto (ex.: `https://your-app.railway.app`).
-3. Inicie o ambiente de desenvolvimento com `npm run dev`. Esse comando executa o servidor Express integrado ao Next.js.
+3. Inicie o ambiente de desenvolvimento com `npm run dev`. Esse comando carrega as variáveis do `.env` e executa o servidor Express integrado ao Next.js.
 
