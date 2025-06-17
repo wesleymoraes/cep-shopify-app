@@ -1,4 +1,5 @@
-import { shopifyApi, LATEST_API_VERSION } from '@shopify/shopify-api'
+import '@shopify/shopify-api/adapters/node'
+import { shopifyApi, LATEST_API_VERSION, MemorySessionStorage } from '@shopify/shopify-api'
 
 export const shopify = shopifyApi({
   apiKey: process.env.SHOPIFY_API_KEY,
@@ -7,5 +8,5 @@ export const shopify = shopifyApi({
   hostName: process.env.HOST.replace(/^https?:\/\//, ''),
   apiVersion: LATEST_API_VERSION,
   isEmbeddedApp: true,
-  sessionStorage: new shopifyApi.session.MemorySessionStorage(),
+  sessionStorage: new MemorySessionStorage(),
 })
